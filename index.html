@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="de" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fortnite Clipz - Epic Community Highlights</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        fortnite: {
+                            purple: '#9146FF',
+                            pink: '#F000FF',
+                            cyan: '#00F0FF',
+                            dark: '#0b0a10',
+                            card: '#14121f',
+                            hover: '#1e1b2e'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .font-fortnite { font-family: 'Teko', sans-serif; letter-spacing: 1px; }
+        body { font-family: 'Inter', sans-serif; }
+        .glow-effect { box-shadow: 0 0 40px -10px rgba(145, 70, 255, 0.25); }
+        
+        /* Sanfte Animation für das Such-Dropdown */
+        #searchMode {
+            transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+            transform-origin: left center;
+        }
+        #searchMode:focus {
+            transform: scale(1.05);
+            opacity: 1;
+        }
+    </style>
+</head>
+<body class="bg-fortnite-dark text-gray-100 min-h-screen flex flex-col selection:bg-fortnite-purple selection:text-white">
+
+    <!-- Header / Navbar -->
+    <header class="sticky top-0 z-50 bg-fortnite-dark/80 backdrop-blur-xl border-b border-purple-900/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-3 group">
+                <div class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-fortnite-purple via-fortnite-pink to-fortnite-cyan flex items-center justify-center font-fortnite text-3xl text-white shadow-lg shadow-fortnite-purple/40 group-hover:scale-105 transition-transform duration-300">
+                    FC
+                </div>
+                <div>
+                    <span class="font-fortnite text-3xl font-bold bg-gradient-to-r from-white via-gray-200 to-fortnite-cyan bg-clip-text text-transparent block leading-none">
+                        FORTNITE CLIPZ
+                    </span>
+                    <span class="text-xs text-fortnite-cyan font-semibold tracking-widest uppercase">Community Highlights</span>
+                </div>
+            </a>
+            
+            <!-- Navigation Buttons rechts -->
+            <div class="flex items-center gap-3">
+                <!-- Neuer Button zu Fortnite Picz -->
+                <a href="picz.html" class="px-4 py-2.5 rounded-2xl bg-fortnite-card border border-purple-900/40 text-gray-300 hover:text-white hover:border-fortnite-purple text-sm font-semibold transition-all duration-300 flex items-center gap-2 shadow-sm hover:shadow-fortnite-purple/20">
+                    <span>🖼️ Fortnite Picz</span>
+                </a>
+
+                <!-- Upload Button -->
+                <a href="hochladen.html" class="relative group overflow-hidden rounded-2xl p-px font-semibold text-sm shadow-lg shadow-fortnite-purple/20">
+                    <span class="absolute inset-0 bg-gradient-to-r from-fortnite-purple via-fortnite-pink to-fortnite-cyan rounded-2xl transition-all duration-300 group-hover:opacity-90"></span>
+                    <div class="relative px-5 py-2.5 rounded-[15px] bg-fortnite-dark transition-all duration-300 group-hover:bg-transparent flex items-center gap-2">
+                        <svg class="w-5 h-5 text-fortnite-cyan group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+                        </svg>
+                        <span class="text-white">Clip hochladen</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Banner -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-6 w-full">
+        <div class="relative overflow-hidden rounded-3xl bg-gradient-to-r from-fortnite-card via-[#1c1830] to-fortnite-card border border-purple-900/30 p-8 md:p-12 glow-effect">
+            <div class="absolute -right-10 -bottom-10 w-96 h-96 bg-fortnite-purple/10 rounded-full blur-3xl pointer-events-none"></div>
+            <div class="relative z-10 max-w-2xl">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-fortnite-purple/10 border border-fortnite-purple/30 text-fortnite-cyan text-xs font-semibold mb-4">
+                    <span class="w-2 h-2 rounded-full bg-fortnite-cyan animate-pulse"></span>
+                    Season Highlights aktiv
+                </div>
+                <h1 class="text-4xl md:text-5xl font-extrabold text-white tracking-tight mb-4 font-fortnite leading-none">
+                    TEILE DEINE KRASSTEN <span class="bg-gradient-to-r from-fortnite-pink to-fortnite-cyan bg-clip-text text-transparent">FORTNITE MOMENTE</span>
+                </h1>
+                <p class="text-gray-400 text-sm md:text-base mb-6">
+                    Egal ob OBS, GeForce Experience oder Screen Recording – lade deine besten Clips hoch und teile sie mit allen.
+                </p>
+                <div class="flex flex-wrap gap-4 text-xs font-medium text-gray-300">
+                    <div class="bg-fortnite-dark/60 border border-purple-900/20 px-4 py-2 rounded-xl flex items-center gap-2">
+                        🔥 <span id="stat-total-clips" class="text-white font-bold">...</span> Clips online
+                    </div>
+                    <div class="bg-fortnite-dark/60 border border-purple-900/20 px-4 py-2 rounded-xl flex items-center gap-2">
+                        🎮 <span id="stat-active-users" class="text-white font-bold">...</span> Gamer aktiv
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 w-full">
+        
+        <!-- Such- und Filterleiste -->
+        <div class="bg-fortnite-card border border-purple-900/30 rounded-3xl p-4 md:p-6 mb-8 flex flex-col gap-4">
+            <div class="flex flex-col md:flex-row gap-4 items-stretch md:items-center justify-between">
+                <div class="flex flex-1 items-center bg-fortnite-dark border border-purple-900/40 rounded-2xl px-3 py-2 focus-within:border-fortnite-cyan transition-colors">
+                    <select id="searchMode" class="bg-fortnite-card text-xs font-semibold text-fortnite-cyan focus:outline-none border border-purple-900/40 rounded-xl px-3 py-1.5 mr-3 cursor-pointer hover:border-fortnite-purple">
+                        <option value="title">Titel</option>
+                        <option value="creator">Name</option>
+                    </select>
+                    <svg class="w-4 h-4 text-gray-400 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+                    <input type="text" id="searchInput" placeholder="Suchen..." class="bg-transparent text-sm text-white placeholder-gray-500 focus:outline-none w-full">
+                </div>
+                <div class="flex items-center gap-2">
+                    <button onclick="setSort('new')" id="sort-new" class="sort-btn px-4 py-2.5 rounded-xl bg-fortnite-purple text-white text-xs font-semibold transition-all shadow-md shadow-fortnite-purple/20">Neuste</button>
+                    <button onclick="setSort('popular')" id="sort-popular" class="sort-btn px-4 py-2.5 rounded-xl bg-fortnite-dark border border-purple-900/30 text-gray-400 hover:text-white hover:border-fortnite-purple text-xs font-semibold transition-all">Beliebt 🔥</button>
+                </div>
+            </div>
+
+            <!-- Kategorien -->
+            <div class="flex items-center gap-2 overflow-x-auto pt-2 border-t border-purple-900/20 pb-1">
+                <span class="text-xs text-gray-500 mr-2 font-medium">Kategorie:</span>
+                <button onclick="setCategory('all')" id="btn-all" class="filter-btn px-4 py-2 rounded-xl bg-fortnite-purple text-white text-xs font-semibold transition-all">Alle</button>
+                <button onclick="setCategory('victory')" id="btn-victory" class="filter-btn px-4 py-2 rounded-xl bg-fortnite-dark border border-purple-900/30 text-gray-400 hover:text-white hover:border-fortnite-purple text-xs font-semibold transition-all">Victory Royale</button>
+                <button onclick="setCategory('clutch')" id="btn-clutch" class="filter-btn px-4 py-2 rounded-xl bg-fortnite-dark border border-purple-900/30 text-gray-400 hover:text-white hover:border-fortnite-purple text-xs font-semibold transition-all">Clutches</button>
+                <button onclick="setCategory('fail')" id="btn-fail" class="filter-btn px-4 py-2 rounded-xl bg-fortnite-dark border border-purple-900/30 text-gray-400 hover:text-white hover:border-fortnite-purple text-xs font-semibold transition-all">Fails</button>
+                <button onclick="setCategory('funny')" id="btn-funny" class="filter-btn px-4 py-2 rounded-xl bg-fortnite-dark border border-purple-900/30 text-gray-400 hover:text-white hover:border-fortnite-purple text-xs font-semibold transition-all">Funny</button>
+                <button onclick="setCategory('freebuild')" id="btn-freebuild" class="filter-btn px-4 py-2 rounded-xl bg-fortnite-dark border border-purple-900/30 text-gray-400 hover:text-white hover:border-fortnite-purple text-xs font-semibold transition-all">Freebuild</button>
+                <button onclick="setCategory('clip')" id="btn-clip" class="filter-btn px-4 py-2 rounded-xl bg-fortnite-dark border border-purple-900/30 text-gray-400 hover:text-white hover:border-fortnite-purple text-xs font-semibold transition-all">Clip</button>
+                <button onclick="setCategory('else')" id="btn-else" class="filter-btn px-4 py-2 rounded-xl bg-fortnite-dark border border-purple-900/30 text-gray-400 hover:text-white hover:border-fortnite-purple text-xs font-semibold transition-all">Else</button>
+            </div>
+        </div>
+
+        <!-- Video Grid -->
+        <div id="videoGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+
+    </main>
+
+    <!-- Lightbox / Vollbild-Modal -->
+    <div id="videoModal" class="fixed inset-0 z-50 bg-black/90 backdrop-blur-md hidden items-center justify-center p-4">
+        <div class="relative max-w-4xl w-full bg-fortnite-card rounded-3xl overflow-hidden border border-purple-950 shadow-2xl">
+            <div class="flex items-center justify-between p-4 border-b border-purple-900/30">
+                <h3 id="modalTitle" class="font-bold text-lg text-white">Vollbild-Ansicht</h3>
+                <button onclick="closeModal()" class="text-gray-400 hover:text-white bg-fortnite-dark p-2 rounded-xl border border-purple-900/40">✕ Schließen</button>
+            </div>
+            <div class="p-4 bg-black">
+                <video id="modalVideo" class="w-full max-h-[70vh] object-contain rounded-2xl" controls autoplay></video>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="border-t border-purple-900/20 bg-fortnite-dark py-8 mt-12">
+        <div class="max-w-7xl mx-auto px-4 text-center text-xs text-gray-500 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <p>&copy; 2026 Fortnite Clipz. Alle Rechte vorbehalten.</p>
+            <div class="flex gap-4">
+                <a href="datenschutz.html" class="hover:text-fortnite-cyan transition-colors">Datenschutz</a>
+                <a href="impressum.html" class="hover:text-fortnite-cyan transition-colors">Impressum</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Logik -->
+    <script>
+        let allClips = [];
+        let activeCategory = 'all';
+        let activeSort = 'new';
+
+        function timeAgo(dateString) {
+            if (!dateString) return 'unbekannt';
+            const now = new Date();
+            const past = new Date(dateString);
+            const seconds = Math.floor((now - past) / 1000);
+
+            if (seconds < 60) return 'gerade eben';
+            const minutes = Math.floor(seconds / 60);
+            if (minutes < 60) return `vor ${minutes} Min.`;
+            const hours = Math.floor(minutes / 60);
+            if (hours < 24) return `vor ${hours} Std.`;
+            const days = Math.floor(hours / 24);
+            if (days < 30) return `vor ${days} Tag${days > 1 ? 'en' : ''}`;
+            const months = Math.floor(days / 30);
+            if (months < 12) return `vor ${months} Monat${months > 1 ? 'en' : ''}`;
+            const years = Math.floor(days / 365);
+            return `vor ${years} Jahr${years > 1 ? 'en' : ''}`;
+        }
+
+        async function loadData() {
+            try {
+                const response = await fetch('data.json');
+                const data = await response.json();
+
+                document.getElementById('stat-total-clips').textContent = data.stats.totalClips;
+                document.getElementById('stat-active-users').textContent = data.stats.activeUsers;
+
+                allClips = data.clips;
+                renderClips();
+            } catch (error) {
+                console.error("Fehler beim Laden der JSON:", error);
+                document.getElementById('videoGrid').innerHTML = `
+                    <div class="col-span-full text-center py-12 text-red-400">
+                        <p class="text-lg">Fehler beim Laden der Clips!</p>
+                        <p class="text-xs text-gray-500 mt-1">Stelle sicher, dass du einen lokalen Server nutzt.</p>
+                    </div>
+                `;
+            }
+        }
+
+        function renderClips() {
+            const grid = document.getElementById('videoGrid');
+            const searchInput = document.getElementById('searchInput').value.toLowerCase().trim();
+            const searchMode = document.getElementById('searchMode').value;
+
+            let filtered = allClips.filter(clip => {
+                const matchesCategory = (activeCategory === 'all') || (clip.category === activeCategory);
+                let matchesSearch = true;
+                if (searchInput !== '') {
+                    if (searchMode === 'title') {
+                        matchesSearch = clip.title.toLowerCase().includes(searchInput);
+                    } else if (searchMode === 'creator') {
+                        matchesSearch = clip.creator.toLowerCase().includes(searchInput);
+                    }
+                }
+                return matchesCategory && matchesSearch;
+            });
+
+            filtered.sort((a, b) => {
+                if (activeSort === 'popular') {
+                    const parseViews = (v) => {
+                        if (typeof v === 'string' && v.includes('k')) return parseFloat(v) * 1000;
+                        return parseInt(v) || 0;
+                    };
+                    return parseViews(b.views) - parseViews(a.views);
+                } else {
+                    return new Date(b.date || 0) - new Date(a.date || 0);
+                }
+            });
+
+            if (filtered.length === 0) {
+                grid.innerHTML = `
+                    <div class="col-span-full text-center py-16 text-gray-500">
+                        <p class="text-xl font-bold">Keine Clips gefunden 🔍</p>
+                        <p class="text-xs mt-1">Versuche einen anderen Suchbegriff oder eine andere Kategorie.</p>
+                    </div>
+                `;
+                return;
+            }
+
+            const badgeColors = {
+                'victory': 'text-amber-400',
+                'clutch': 'text-fortnite-pink',
+                'fail': 'text-rose-400',
+                'funny': 'text-fortnite-cyan',
+                'freebuild': 'text-blue-400',
+                'clip': 'text-purple-400',
+                'else': 'text-gray-400'
+            };
+
+            grid.innerHTML = filtered.map(clip => {
+                const badgeColorClass = badgeColors[clip.category] || 'text-fortnite-cyan';
+                const formattedTime = timeAgo(clip.date);
+
+                const verifiedBadge = clip.verified ? `
+                    <span class="inline-flex items-center text-blue-400 ml-1" title="Verifizierter Creator">
+                        <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.25a.75.75 0 00-1.06-1.06L9 11.19l-1.94-1.94a.75.75 0 10-1.06 1.06l2.5 2.5a.75.75 0 001.06 0l4-4z" clip-rule="evenodd"></path>
+                        </svg>
+                    </span>
+                ` : '';
+
+                return `
+                    <div class="bg-fortnite-card rounded-3xl overflow-hidden border border-purple-900/20 hover:border-fortnite-purple/50 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-2xl hover:shadow-fortnite-purple/20 flex flex-col group">
+                        <div class="relative aspect-video bg-gray-900 overflow-hidden">
+                            <span class="absolute top-3 left-3 z-10 bg-black/70 backdrop-blur-md border border-purple-900/40 ${badgeColorClass} text-[10px] font-bold px-2.5 py-1 rounded-lg uppercase tracking-wider">
+                                ${clip.categoryLabel}
+                            </span>
+                            <video class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 cursor-pointer" 
+                                   controls 
+                                   preload="metadata"
+                                   muted
+                                   onmouseenter="this.play()" 
+                                   onmouseleave="this.pause(); this.currentTime=0.1;"
+                                   onclick="openModal('${clip.videoUrl}', '${escapeHtml(clip.title)}')">
+                                <source src="${clip.videoUrl}#t=0.1" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="p-5 flex flex-col justify-between flex-grow">
+                            <div>
+                                <h3 onclick="openModal('${clip.videoUrl}', '${escapeHtml(clip.title)}')" class="font-bold text-base text-white mb-1.5 hover:text-fortnite-cyan transition-colors cursor-pointer">
+                                    ${clip.title}
+                                </h3>
+                                <p class="text-xs text-gray-400 mb-4 line-clamp-2">${clip.description}</p>
+                            </div>
+                            <div class="flex items-center justify-between border-t border-purple-900/20 pt-3 text-xs text-gray-400">
+                                <span class="flex items-center gap-2 font-medium text-gray-200">
+                                    <div class="w-6 h-6 rounded-full bg-gradient-to-tr from-fortnite-purple to-fortnite-pink flex items-center justify-center text-[10px] font-bold text-white uppercase">
+                                        ${clip.creator.charAt(0)}
+                                    </div>
+                                    <span class="flex items-center">${clip.creator} ${verifiedBadge}</span>
+                                </span>
+                                <div class="flex flex-col items-end gap-0.5">
+                                    <span class="text-fortnite-cyan font-semibold">${clip.views} Aufrufe</span>
+                                    <span class="text-[10px] text-gray-500">${formattedTime}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        function openModal(videoUrl, title) {
+            const modal = document.getElementById('videoModal');
+            const video = document.getElementById('modalVideo');
+            const modalTitle = document.getElementById('modalTitle');
+
+            modalTitle.textContent = title;
+            video.src = videoUrl;
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            video.play();
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('videoModal');
+            const video = document.getElementById('modalVideo');
+
+            video.pause();
+            video.src = '';
+            modal.classList.remove('flex');
+            modal.classList.add('hidden');
+        }
+
+        function setCategory(category) {
+            activeCategory = category;
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.className = 'filter-btn px-4 py-2 rounded-xl bg-fortnite-dark border border-purple-900/30 text-gray-400 hover:text-white hover:border-fortnite-purple text-xs font-semibold transition-all';
+            });
+            const activeBtn = document.getElementById(`btn-${category}`);
+            if (activeBtn) {
+                activeBtn.className = 'filter-btn px-4 py-2 rounded-xl bg-fortnite-purple text-white text-xs font-semibold transition-all';
+            }
+            renderClips();
+        }
+
+        function setSort(sortType) {
+            activeSort = sortType;
+            document.querySelectorAll('.sort-btn').forEach(btn => {
+                btn.className = 'sort-btn px-4 py-2.5 rounded-xl bg-fortnite-dark border border-purple-900/30 text-gray-400 hover:text-white hover:border-fortnite-purple text-xs font-semibold transition-all';
+            });
+            const activeBtn = document.getElementById(`sort-${sortType}`);
+            if (activeBtn) {
+                activeBtn.className = 'sort-btn px-4 py-2.5 rounded-xl bg-fortnite-purple text-white text-xs font-semibold transition-all shadow-md shadow-fortnite-purple/20';
+            }
+            renderClips();
+        }
+
+        function escapeHtml(text) {
+            return text.replace(/"/g, '&quot;').replace(/'/g, '&#039;');
+        }
+
+        document.getElementById('searchInput').addEventListener('input', renderClips);
+        document.getElementById('searchMode').addEventListener('change', renderClips);
+
+        loadData();
+    </script>
+
+</body>
+</html>
