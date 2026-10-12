@@ -1,0 +1,56 @@
+{
+  "stats": {
+    "piczCount": "0 Picz online",
+    "gamerActive": "1 Gamer aktiv"
+  },
+  "picz": [
+    {
+      "id": 1,
+      "title": "Neon Spectra Combo im Abendlicht ✨",
+      "description": "Perfekter Screenshot direkt nach dem Sonnenuntergang in Tilted Towers.",
+      "creator": "PixelQueen",
+      "verified": true,
+      "views": "1.4k",
+      "category": "skin-combo",
+      "categoryLabel": "Skin Combo",
+      "image": "bild1.png",
+      "date": "2026-10-11T16:30:00"
+    },
+    {
+      "id": 2,
+      "title": "Geheimer Ort auf der neuen Map 🗺️",
+      "description": "Diesen Aussichtspunkt hat garantiert noch nicht jeder entdeckt.",
+      "creator": "Scenerify",
+      "verified": false,
+      "views": "850",
+      "category": "map",
+      "categoryLabel": "Map",
+      "image": "bild2.png",
+      "date": "2026-10-11T12:00:00"
+    },
+    {
+      "id": 3,
+      "title": "Wenn der Loot komplett eskaliert 😂",
+      "description": "3 Legendäre Waffen in einer einzigen Truhe direkt am Start!",
+      "creator": "LootKing",
+      "verified": true,
+      "views": "2.1k",
+      "category": "funny",
+      "categoryLabel": "Funny",
+      "image": "bild3.png",
+      "date": "2026-10-10T18:00:00"
+    },
+    {
+      "id": 4,
+      "title": "Unterwasser-Glitch in der Sturmkante",
+      "description": "Mein Charakter schwimmt mitten in der Luft nach dem letzten Update.",
+      "creator": "GlitchHunter",
+      "verified": false,
+      "views": "620",
+      "category": "glitch",
+      "categoryLabel": "Glitch / Bug",
+      "image": "bild4.png",
+      "date": "2026-10-08T14:20:00"
+    }
+  ]
+}
