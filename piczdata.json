@@ -1,6 +1,23 @@
 {
   "stats": {
-    "piczCount": "0 Picz online",
+    "piczCount": "1 Picz online",
     "gamerActive": "1 Gamer aktiv"
   },
-  "picz": []}
+    "picz": [
+    {
+      "id": 1,
+      "title": "Cleane Pickaxe",
+      "description": "Neue Kuchen Pickaxe von Fortnite.",
+      "creator": "PixelQueen",
+      "verified": true,
+      "views": "1",
+      "category": "cosmetic",
+      "categoryLabel": "cosmetic",
+      "image": "bild1.png",
+      "date": "2026-10-12T21:43:00"
+    },
+    
+
+    
+  ]
+}
