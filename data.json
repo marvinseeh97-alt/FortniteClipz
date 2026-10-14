@@ -3,4 +3,18 @@
     "totalClips": "0",
     "activeUsers": "1"
   },
-  "clips": []}
+  "clips": [
+      {
+      "id": 4,
+      "title": "Clip",
+      "description": "Freebuild mit cleanem Headshot.",
+      "creator": "Marffuni",
+      "verified": true,
+      "views": "1",
+      "category": "clip",
+      "categoryLabel": "CLIP",
+      "videoUrl": "Freebuild_mit_cleanem_Headshot.mp4",
+      "date": "2026-10-14T15:31:00"
+    }
+  ]
+}
