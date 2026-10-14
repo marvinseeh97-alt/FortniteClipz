@@ -15,6 +15,19 @@
       "categoryLabel": "Cosmetic",
       "image": "cleane_pickaxe.png",
       "date": "2026-10-12T21:43:00"
+    },
+    {
+      "id": 1,
+      "title": "Lustiger Skin",
+      "description": "Komischer skin der viel zu dick ist.",
+      "creator": "Marffuni",
+      "verified": false,
+      "views": "0",
+      "category": "funny",
+      "categoryLabel": "Funny",
+      "image": "lustiger_skin.png",
+      "date": "2026-10-14T20:44:00"
     }
   ]
 }
+  
