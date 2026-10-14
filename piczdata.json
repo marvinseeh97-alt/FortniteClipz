@@ -3,7 +3,7 @@
     "piczCount": "1 Picz online",
     "gamerActive": "2 Gamer aktiv"
   },
-    "picz": [
+  "picz": [
     {
       "id": 1,
       "title": "Cleane Pickaxe",
@@ -30,4 +30,3 @@
     }
   ]
 }
-  
