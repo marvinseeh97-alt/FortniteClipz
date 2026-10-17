@@ -1,6 +1,6 @@
 {
   "stats": {
-    "totalClips": "1",
+    "totalClips": "2",
     "activeUsers": "2"
   },
   "clips": [
@@ -19,7 +19,7 @@
           {
       "id": 2,
       "title": "Cheater ?",
-      "description": "CHeater or luck?",
+      "description": "Cheater or luck?",
       "creator": "Alt + F4",
       "verified": false,
       "views": "1",
