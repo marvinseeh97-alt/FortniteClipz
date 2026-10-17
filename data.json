@@ -5,7 +5,7 @@
   },
   "clips": [
       {
-      "id": 4,
+      "id": 1,
       "title": "Clip",
       "description": "Freebuild mit cleanem Headshot.",
       "creator": "Marffuni",
@@ -15,6 +15,19 @@
       "categoryLabel": "CLIP",
       "videoUrl": "Freebuild_mit_cleanem_Headshot.mp4",
       "date": "2026-10-14T15:31:00"
+    },
+          {
+      "id": 2,
+      "title": "Cheater ?",
+      "description": "CHeater or luck?",
+      "creator": "Alt + F4",
+      "verified": false,
+      "views": "1",
+      "category": "else",
+      "categoryLabel": "Else",
+      "videoUrl": "fastflickorcheater.mp4",
+      "date": "2026-10-17T20:00:00"
     }
+
   ]
 }
