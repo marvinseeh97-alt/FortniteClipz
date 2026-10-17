@@ -27,6 +27,18 @@
       "categoryLabel": "Else",
       "videoUrl": "fastflickorcheater.mp4",
       "date": "2026-10-17T19:55:00"
+    },
+          {
+      "id": 3,
+      "title": "Clipped",
+      "description": "Got Clipped",
+      "creator": "Alt + F4",
+      "verified": false,
+      "views": "0",
+      "category": "clip",
+      "categoryLabel": "CLIP",
+      "videoUrl": "Fortnite.mp4",
+      "date": "2026-10-17T23:23:00"
     }
 
   ]
