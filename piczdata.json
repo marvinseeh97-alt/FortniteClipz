@@ -27,6 +27,18 @@
       "categoryLabel": "Funny",
       "image": "lustiger_skin.png",
       "date": "2026-10-14T20:44:00"
+    },
+    {
+      "id": 3,
+      "title": "Ranked Cup (Solo)",
+      "description": "Ranked Cup (Solo) , Fehlermedlung , konnte nur 10 von 11 matches spielen.",
+      "creator": "Alt + F4",
+      "verified": true,
+      "views": "1",
+      "category": "glitch",
+      "categoryLabel": "Glitch & Bug",
+      "image": "fortnitecupscam.png",
+      "date": "2026-10-19T22:47:00"
     }
   ]
 }
