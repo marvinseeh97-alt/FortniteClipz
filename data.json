@@ -1,6 +1,6 @@
 {
   "stats": {
-    "totalClips": "3",
+    "totalClips": "4",
     "activeUsers": "3"
   },
   "clips": [
@@ -51,7 +51,7 @@
       "categoryLabel": "Clip",
       "videoUrl": "luftsnipe.mp4",
       "date": "2026-10-19T16:50:00"
-    },
+    }
 
   ]
 }
