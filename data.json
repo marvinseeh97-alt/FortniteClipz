@@ -54,12 +54,12 @@
     },
     {
       "id": 5,
-      "title": "Faied Piece",
+      "title": "Failed Piece",
       "description": "Schön gepieced und dann gestorben.",
       "creator": "Marffuni",
       "verified": false,
       "views": "0",
-      "category": "fail"
+      "category": "fail",
       "categoryLabel": "Fail",
       "videoUrl": "Fortnitefailedclip.mp4",
       "date": "2026-10-21T7:24:00"
