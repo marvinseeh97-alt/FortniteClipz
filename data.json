@@ -47,8 +47,8 @@
       "creator": "Mihajlo",
       "verified": false,
       "views": "3",
-      "category": "clip",
-      "categoryLabel": "Clip",
+      "category": "clutch",
+      "categoryLabel": "Clutch",
       "videoUrl": "luftsnipe.mp4",
       "date": "2026-10-19T16:50:00"
     },
@@ -70,11 +70,35 @@
       "description": "Pickaxe kill 1v1.",
       "creator": "Alt + F4",
       "verified": false,
-      "views": "1",
+      "views": "2",
       "category": "funny",
       "categoryLabel": "Funny",
       "videoUrl": "pickaxed.mp4",
       "date": "2026-10-21T16:43:00"
-    }
+    },
+    {
+      "id": 7,
+      "title": "Gepickaxed",
+      "description": "Mit dem Erntewerkzeug niedergeknüppelt.",
+      "creator": "Marffuni",
+      "verified": false,
+      "views": "1",
+      "category": "funny",
+      "categoryLabel": "Funny",
+      "videoUrl": "pickaxedmarfffuni.mp4",
+      "date": "2026-10-21T19:23:05"
+    },
+    {
+      "id": 8,
+      "title": "Win mit kleinem Clip",
+      "description": "Schön den letzten gegner geclipped.",
+      "creator": "Marffuni",
+      "verified": false,
+      "views": "1",
+      "category": "victory",
+      "categoryLabel": "Victory Royale",
+      "videoUrl": "battleroyalewinclip.mp4",
+      "date": "2026-10-21T20:07:32"
+    },
   ]
 }
