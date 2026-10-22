@@ -1,6 +1,6 @@
 {
   "stats": {
-    "totalClips": "8",
+    "totalClips": "9",
     "activeUsers": "3"
   },
   "clips": [
@@ -99,6 +99,18 @@
       "categoryLabel": "Victory Royale",
       "videoUrl": "battleroyalewinclip.mp4",
       "date": "2026-10-21T20:07:32"
+    },
+    {
+      "id": 9,
+      "title": "Clip",
+      "description": "Viel editiert und ihn getötet.",
+      "creator": "Mihajlo",
+      "verified": false,
+      "views": "0",
+      "category": "clip",
+      "categoryLabel": "Clip",
+      "videoUrl": "Mihajloclip.mp4",
+      "date": "2026-10-22T15:36:00"
     }
   ]
 }
