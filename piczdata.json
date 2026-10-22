@@ -10,6 +10,13 @@
       "title": "Cleane Pickaxe",
       "description": "Neue Kuchen Pickaxe von Fortnite.",
       "creator": "Zyr1x",
+      "badges": {
+        "verified": false,
+        "staff": false,
+        "trusted": false,
+        "og": false,
+        "vip": false
+      },
       "verified": false,
       "views": "2",
       "category": "cosmetic",
