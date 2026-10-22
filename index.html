@@ -31,7 +31,6 @@
         body { font-family: 'Inter', sans-serif; }
         .glow-effect { box-shadow: 0 0 40px -10px rgba(145, 70, 255, 0.25); }
         
-        /* Sanfte Animation für das Such-Dropdown */
         #searchMode {
             transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
             transform-origin: left center;
@@ -59,15 +58,12 @@
                 </div>
             </a>
             
-            <!-- Navigation Buttons rechts -->
             <div class="flex items-center gap-3">
-                <!-- Neuer Button zu Fortnite Picz -->
                 <a href="picz.html" class="px-4 py-2.5 rounded-2xl bg-fortnite-card border border-purple-900/40 text-gray-300 hover:text-white hover:border-fortnite-purple text-sm font-semibold transition-all duration-300 flex items-center gap-2 shadow-sm hover:shadow-fortnite-purple/20">
                     <span>🖼️ Fortnite Picz</span>
                 </a>
 
-                <!-- Upload Button -->
-                <a href="https://hochladenfnclzap.netlify.app/" class="relative group overflow-hidden rounded-2xl p-px font-semibold text-sm shadow-lg shadow-fortnite-purple/20">
+                <a href="hochladen.html" class="relative group overflow-hidden rounded-2xl p-px font-semibold text-sm shadow-lg shadow-fortnite-purple/20">
                     <span class="absolute inset-0 bg-gradient-to-r from-fortnite-purple via-fortnite-pink to-fortnite-cyan rounded-2xl transition-all duration-300 group-hover:opacity-90"></span>
                     <div class="relative px-5 py-2.5 rounded-[15px] bg-fortnite-dark transition-all duration-300 group-hover:bg-transparent flex items-center gap-2">
                         <svg class="w-5 h-5 text-fortnite-cyan group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -161,9 +157,14 @@
 
     <!-- Footer -->
     <footer class="border-t border-purple-900/20 bg-fortnite-dark py-8 mt-12">
-        <div class="max-w-7xl mx-auto px-4 text-center text-xs text-gray-500 flex flex-col sm:flex-row items-center justify-between gap-4">
-            <p>&copy; 2026 Fortnite Clipz. Alle Rechte vorbehalten.</p>
-            <div class="flex gap-4">
+        <div class="max-w-7xl mx-auto px-4 text-xs text-gray-500 grid grid-cols-1 sm:grid-cols-3 items-center gap-4">
+            <div class="text-center sm:text-left font-mono text-fortnite-grey/80">
+                <span id="app-version">V1.0</span>
+            </div>
+            <div class="text-center font-medium">
+                &copy; Fortnite Clipz – Alle Rechte vorbehalten.
+            </div>
+            <div class="flex justify-center sm:justify-end gap-4">
                 <a href="datenschutz.html" class="hover:text-fortnite-cyan transition-colors">Datenschutz</a>
                 <a href="impressum.html" class="hover:text-fortnite-cyan transition-colors">Impressum</a>
             </div>
@@ -202,6 +203,7 @@
 
                 document.getElementById('stat-total-clips').textContent = data.stats.totalClips;
                 document.getElementById('stat-active-users').textContent = data.stats.activeUsers;
+                document.getElementById('app-version').textContent = data.version || 'V1.0';
 
                 allClips = data.clips;
                 renderClips();
@@ -270,6 +272,29 @@
                 const badgeColorClass = badgeColors[clip.category] || 'text-fortnite-cyan';
                 const formattedTime = timeAgo(clip.date);
 
+                // --- NEUES RÄNGE- & BADGE-SYSTEM ---
+// --- NEUES RÄNGE- & BADGE-SYSTEM ---
+                let creatorNameClass = "text-gray-200"; // Standard Name
+                let roleBadge = "";
+
+                if (clip.staff) {
+                    creatorNameClass = "text-red-400 font-bold";
+                    roleBadge = `<span class="bg-red-500/20 border border-red-500/40 text-red-400 text-[10px] font-bold px-1.5 py-0.5 rounded uppercase ml-1.5">Staff</span>`;
+                } else if (clip.vip) {
+                    creatorNameClass = "text-amber-300 font-bold drop-shadow-[0_0_8px_rgba(251,191,36,0.3)]";
+                    roleBadge = `<span class="bg-amber-500/20 border border-amber-500/40 text-amber-300 text-[10px] font-bold px-1.5 py-0.5 rounded uppercase ml-1.5">VIP</span>`;
+                } else if (clip.trusted) {
+                    creatorNameClass = "text-orange-400 font-semibold";
+                    roleBadge = `<span class="bg-orange-500/20 border border-orange-500/40 text-orange-400 text-[10px] font-bold px-1.5 py-0.5 rounded uppercase ml-1.5">Trusted</span>`;
+                } else if (clip.og) {
+                    creatorNameClass = "text-emerald-400 font-semibold";
+                    roleBadge = `<span class="bg-emerald-500/20 border border-emerald-500/40 text-emerald-400 text-[10px] font-bold px-1.5 py-0.5 rounded uppercase ml-1.5">OG</span>`;
+                } else if (clip.verified) {
+                    // Wenn verified true ist (und kein VIP/Staff/etc.), wird der Name blau
+                    creatorNameClass = "text-blue-400 font-semibold";
+                }
+
+                // Blauer Haken (Verified)
                 const verifiedBadge = clip.verified ? `
                     <span class="inline-flex items-center text-blue-400 ml-1" title="Verifizierter Creator">
                         <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20">
@@ -302,13 +327,17 @@
                                 <p class="text-xs text-gray-400 mb-4 line-clamp-2">${clip.description}</p>
                             </div>
                             <div class="flex items-center justify-between border-t border-purple-900/20 pt-3 text-xs text-gray-400">
-                                <span class="flex items-center gap-2 font-medium text-gray-200">
-                                    <div class="w-6 h-6 rounded-full bg-gradient-to-tr from-fortnite-purple to-fortnite-pink flex items-center justify-center text-[10px] font-bold text-white uppercase">
+                                <span class="flex items-center gap-2 font-medium">
+                                    <div class="w-6 h-6 rounded-full bg-gradient-to-tr from-fortnite-purple to-fortnite-pink flex items-center justify-center text-[10px] font-bold text-white uppercase flex-shrink-0">
                                         ${clip.creator.charAt(0)}
                                     </div>
-                                    <span class="flex items-center">${clip.creator} ${verifiedBadge}</span>
+                                    <span class="flex items-center flex-wrap gap-1">
+                                        <span class="${creatorNameClass}">${clip.creator}</span>
+                                        ${verifiedBadge}
+                                        ${roleBadge}
+                                    </span>
                                 </span>
-                                <div class="flex flex-col items-end gap-0.5">
+                                <div class="flex flex-col items-end gap-0.5 flex-shrink-0">
                                     <span class="text-fortnite-cyan font-semibold">${clip.views} Aufrufe</span>
                                     <span class="text-[10px] text-gray-500">${formattedTime}</span>
                                 </div>
