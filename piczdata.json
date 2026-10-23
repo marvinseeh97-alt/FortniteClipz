@@ -1,6 +1,11 @@
 {
+  "version": "V1.2",
+  "changelog": {
+    "enabled": true,
+    "title": "Was ist neu in V1.2?",
+    "message": "• Neue Abzeichen hinzugefügt\n• Hochlad-Error behoben\n• Changelog Fenster hinzugefügt\n• Man kann jetzt ganz unten links die Version der Seite sehen"
+  },
   "stats": {
-    "version": "V1.1",
     "piczCount": "3 Picz online",
     "gamerActive": "3 Gamer aktiv"
   },
