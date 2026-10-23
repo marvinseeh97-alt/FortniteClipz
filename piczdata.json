@@ -1,7 +1,7 @@
 {
   "version": "V1.2",
   "changelog": {
-    "enabled": true,
+    "enabled": false,
     "title": "Was ist neu in V1.2?",
     "message": "• Neue Abzeichen hinzugefügt\n• Hochlad-Error behoben\n• Changelog Fenster hinzugefügt\n• Man kann jetzt ganz unten links die Version der Seite sehen"
   },
