@@ -125,6 +125,33 @@
         </div>
     </main>
 
+    <!-- CHANGELOG MODAL -->
+    <div id="changelogModal" class="fixed inset-0 bg-black/80 backdrop-blur-md z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-cardBg border border-purple-500/40 max-w-lg w-full rounded-3xl p-6 relative shadow-2xl shadow-purple-500/10 animate-in fade-in zoom-in duration-200">
+            <div class="flex items-center justify-between pb-4 border-b border-cardBorder mb-4">
+                <div class="flex items-center space-x-3">
+                    <div class="w-9 h-9 rounded-xl bg-purple-600/20 border border-purple-500/30 flex items-center justify-center text-neonPurple font-bold">
+                        <i class="fa-solid fa-bullhorn text-sm"></i>
+                    </div>
+                    <div>
+                        <h3 id="changelog-title" class="text-lg font-bold text-white leading-tight"></h3>
+                        <span id="changelog-version" class="text-xs font-mono text-purple-400 font-semibold"></span>
+                    </div>
+                </div>
+                <button onclick="closeChangelogModal()" class="text-gray-400 hover:text-white bg-darkBg border border-cardBorder w-8 h-8 rounded-xl flex items-center justify-center transition-all">
+                    <i class="fa-solid fa-xmark text-sm"></i>
+                </button>
+            </div>
+            
+            <!-- Changelog Nachricht -->
+            <div id="changelog-message" class="text-gray-300 text-sm whitespace-pre-line leading-relaxed mb-6 bg-darkBg/60 p-4 rounded-2xl border border-cardBorder/60 font-medium"></div>
+
+            <button onclick="closeChangelogModal()" class="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:opacity-90 text-white font-bold py-3 rounded-xl transition-all shadow-lg shadow-purple-500/25">
+                Verstanden & Schließen
+            </button>
+        </div>
+    </div>
+
     <!-- ZOOM MODAL -->
     <div id="imageModal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4" onclick="closeModal()">
         <div class="bg-cardBg border border-cardBorder max-w-4xl w-full rounded-3xl overflow-hidden shadow-2xl relative" onclick="event.stopPropagation()">
@@ -174,7 +201,7 @@
         </div>
     </footer>
 
-    <!-- JAVASCRIPT: LOGIK, ZEIT & BADGES -->
+    <!-- JAVASCRIPT: LOGIK, ZEIT, BADGES & CHANGELOG -->
     <script>
         let globalData = { stats: {}, picz: [] };
         let currentCategory = 'all';
@@ -208,7 +235,6 @@
             return `gerade eben`;
         }
 
-        // Ermittelt die Textfarbe des Namens basierend auf dem höchsten Rang
         function getCreatorColorClass(badges) {
             if (!badges) return 'text-gray-200';
             if (badges.staff) return 'text-red-400';
@@ -219,7 +245,6 @@
             return 'text-gray-200';
         }
 
-        // Erstellt das HTML der Badges
         function getBadgesHTML(badges) {
             if (!badges) return '';
             let html = '';
@@ -248,10 +273,14 @@
                 const response = await fetch('piczdata.json');
                 globalData = await response.json();
                 
-                document.getElementById('stat-picz-count').innerText = globalData.stats.piczCount || '0 Picz online';
-                document.getElementById('stat-gamer-active').innerText = globalData.stats.gamerActive || '0 Gamer aktiv';
-                document.getElementById('footer-version').innerText = globalData.stats.version || 'V1.0';
+                // Statistiken & Version aus JSON setzen
+                document.getElementById('stat-picz-count').innerText = globalData.stats?.piczCount || '0 Picz online';
+                document.getElementById('stat-gamer-active').innerText = globalData.stats?.gamerActive || '0 Gamer aktiv';
+                document.getElementById('footer-version').innerText = globalData.version || 'V1.0';
                 
+                // Changelog überprüfen und anzeigen
+                checkChangelog(globalData.changelog, globalData.version);
+
                 filterPicz();
             } catch (error) {
                 console.error('Fehler beim Laden der piczdata.json:', error);
@@ -262,6 +291,20 @@
                     </div>
                 `;
             }
+        }
+
+        // Changelog Modal Steuerung
+        function checkChangelog(changelog, version) {
+            if (changelog && changelog.enabled) {
+                document.getElementById('changelog-title').innerText = changelog.title || 'Was ist neu?';
+                document.getElementById('changelog-version').innerText = version || '';
+                document.getElementById('changelog-message').innerText = changelog.message || '';
+                document.getElementById('changelogModal').classList.remove('hidden');
+            }
+        }
+
+        function closeChangelogModal() {
+            document.getElementById('changelogModal').classList.add('hidden');
         }
 
         function renderPicz(items) {
@@ -368,7 +411,6 @@
             document.getElementById('modal-title').innerText = item.title;
             document.getElementById('modal-description').innerText = item.description;
             
-            // Name im Modal in der passenden Farbe
             const modalCreator = document.getElementById('modal-creator');
             modalCreator.innerText = item.creator;
             modalCreator.className = `font-bold text-sm ${getCreatorColorClass(item.badges)}`;
