@@ -6,7 +6,7 @@
     "message": "• Neue Abzeichen hinzugefügt\n• Hochlad-Error Behoben\n• Changelog Fenster hinzugefügt\n• Man kann jetzt ganz unten links die Version der Seite sehen"
   },
   "stats": {
-    "totalClips": "9",
+    "totalClips": "10",
     "activeUsers": "3"
   },
   "clips": [
@@ -117,6 +117,18 @@
       "categoryLabel": "Clip",
       "videoUrl": "Mihajloclip.mp4",
       "date": "2026-10-22T15:36:00"
+    },
+    {
+      "id": 10,
+      "title": "Car Flip",
+      "description": "War alles Skill kein Luck.",
+      "creator": "Marffuni",
+      "verified": false,
+      "views": "0", 
+      "category": "funny",
+      "categoryLabel": "Funny",
+      "videoUrl": "fortnitecarflipmarffuni.mp4",
+      "date": "2026-10-23T15:29:00"
     }
   ]
 }
