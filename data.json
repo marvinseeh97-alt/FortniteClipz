@@ -6,7 +6,7 @@
     "message": "• Neue Abzeichen hinzugefügt\n• Hochlad-Error Behoben\n• Changelog Fenster hinzugefügt\n• Man kann jetzt ganz unten links die Version der Seite sehen"
   },
   "stats": {
-    "totalClips": "10",
+    "totalClips": "11",
     "activeUsers": "3"
   },
   "clips": [
@@ -129,6 +129,18 @@
       "categoryLabel": "Funny",
       "videoUrl": "fortnitecarflipmarffuni.mp4",
       "date": "2026-10-23T15:29:00"
+    },
+    {
+      "id": 11,
+      "title": "Ghosthit",
+      "description": "Er wollte mich clippen aber hat mir einen Ghosthit gegeben.",
+      "creator": "Marffuni",
+      "verified": false,
+      "views": "1", 
+      "category": "fail",
+      "categoryLabel": "Fail",
+      "videoUrl": "ghosthitmarffuni.mp4",
+      "date": "2026-10-25T10:32:00"
     }
   ]
 }
