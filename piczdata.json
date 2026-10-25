@@ -52,6 +52,18 @@
       "categoryLabel": "Glitch / Bug",
       "image": "fortnitecupscam.png",
       "date": "2026-10-19T22:47:00"
+    },
+    {
+      "id": 4,
+      "title": "Ranked Cup",
+      "description": "Ranked Cup Duos mit Marffuni - TOP #14",
+      "creator": "Alt + F4",
+      "verified": false,
+      "views": "2",
+      "category": "Else",
+      "categoryLabel": "Else",
+      "image": "Reloadrankedcup.png",
+      "date": "2026-10-15T22:21:00"
     }
   ]
 }
