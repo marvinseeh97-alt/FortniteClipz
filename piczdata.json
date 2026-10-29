@@ -7,7 +7,7 @@
   },
   "stats": {
     "piczCount": "4 Picz online",
-    "gamerActive": "3 Gamer aktiv"
+    "gamerActive": "4 Gamer aktiv"
   },
   "picz": [
     {
@@ -23,7 +23,7 @@
         "vip": false
       },
       "verified": false,
-      "views": "2",
+      "views": "3",
       "category": "cosmetic",
       "categoryLabel": "Cosmetic",
       "image": "cleane_pickaxe.png",
@@ -35,7 +35,7 @@
       "description": "Komischer skin der viel zu dick ist.",
       "creator": "Marffuni",
       "verified": false,
-      "views": "2",
+      "views": "3",
       "category": "funny",
       "categoryLabel": "Funny",
       "image": "lustiger_skin.png",
@@ -59,7 +59,7 @@
       "description": "Ranked Cup Duos mit Marffuni - TOP #14",
       "creator": "Alt + F4",
       "verified": false,
-      "views": "2",
+      "views": "3",
       "category": "Else",
       "categoryLabel": "Else",
       "image": "Reloadrankedcup.png",
