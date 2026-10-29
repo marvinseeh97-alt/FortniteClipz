@@ -7,7 +7,7 @@
   },
   "stats": {
     "totalClips": "11",
-    "activeUsers": "3"
+    "activeUsers": "4"
   },
   "clips": [
       {
@@ -28,7 +28,7 @@
       "description": "Cheater or luck?",
       "creator": "Alt + F4",
       "verified": false,
-      "views": "3",
+      "views": "4",
       "category": "else",
       "categoryLabel": "Else",
       "videoUrl": "fastflickorcheater.mp4",
@@ -40,7 +40,7 @@
       "description": "Got Clipped.",
       "creator": "Alt + F4",
       "verified": false,
-      "views": "3",
+      "views": "4",
       "category": "clip",
       "categoryLabel": "CLIP",
       "videoUrl": "Fortnite.mp4",
@@ -64,7 +64,7 @@
       "description": "Schön gepieced und dann gestorben.",
       "creator": "Marffuni",
       "verified": false,
-      "views": "3",
+      "views": "4",
       "category": "fail",
       "categoryLabel": "Fail",
       "videoUrl": "Fortnitefailedbox.mp4",
@@ -136,7 +136,7 @@
       "description": "Er wollte mich clippen aber hat mir einen Ghosthit gegeben.",
       "creator": "Marffuni",
       "verified": false,
-      "views": "2", 
+      "views": "3", 
       "category": "fail",
       "categoryLabel": "Fail",
       "videoUrl": "ghosthit.mp4",
