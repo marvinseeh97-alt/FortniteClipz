@@ -1,69 +1,18 @@
 {
   "version": "V1.2",
+  "maintenance": {
+    "enabled": true,
+    "title": "Großes Update im Anmarsch! 🛠️",
+    "message": "Wir arbeiten aktuell an Fortnite Picz, um dir neue Features, bessere Performance und krassere Funktionen zu bringen.\n\nDie Seite ist während dieser Zeit vorübergehend nicht nutzbar. Schau bald wieder vorbei!"
+  },
   "changelog": {
     "enabled": false,
     "title": "Was ist neu in V1.2?",
-    "message": "• Neue Abzeichen hinzugefügt\n• Hochlad-Error behoben\n• Changelog Fenster hinzugefügt\n• Man kann jetzt ganz unten links die Version der Seite sehen"
+    "message": "..."
   },
   "stats": {
-    "piczCount": "4 Picz online",
-    "gamerActive": "4 Gamer aktiv"
+    "piczCount": "1.2k Picz online",
+    "gamerActive": "850 Gamer aktiv"
   },
-  "picz": [
-    {
-      "id": 1,
-      "title": "Cleane Pickaxe",
-      "description": "Neue Kuchen Pickaxe von Fortnite.",
-      "creator": "Zyr1x",
-      "badges": {
-        "verified": false,
-        "staff": false,
-        "trusted": false,
-        "og": false,
-        "vip": false
-      },
-      "verified": false,
-      "views": "3",
-      "category": "cosmetic",
-      "categoryLabel": "Cosmetic",
-      "image": "cleane_pickaxe.png",
-      "date": "2026-10-12T21:43:00"
-    },
-    {
-      "id": 2,
-      "title": "Lustiger Skin",
-      "description": "Komischer skin der viel zu dick ist.",
-      "creator": "Marffuni",
-      "verified": false,
-      "views": "3",
-      "category": "funny",
-      "categoryLabel": "Funny",
-      "image": "lustiger_skin.png",
-      "date": "2026-10-14T20:44:00"
-    },
-    {
-      "id": 3,
-      "title": "Ranked Cup (Solo)",
-      "description": "Ranked Cup (Solo) , Fehlermedlung , konnte nur 10 von 11 matches spielen.",
-      "creator": "Alt + F4",
-      "verified": false,
-      "views": "2",
-      "category": "glitch",
-      "categoryLabel": "Glitch / Bug",
-      "image": "fortnitecupscam.png",
-      "date": "2026-10-19T22:47:00"
-    },
-    {
-      "id": 4,
-      "title": "Ranked Cup",
-      "description": "Ranked Cup Duos mit Marffuni - TOP #14",
-      "creator": "Alt + F4",
-      "verified": false,
-      "views": "3",
-      "category": "Else",
-      "categoryLabel": "Else",
-      "image": "Reloadrankedcup.png",
-      "date": "2026-10-25T22:21:00"
-    }
-  ]
+  "picz": []
 }
