@@ -34,24 +34,7 @@
 </head>
 <body class="bg-fortnite-dark text-gray-100 min-h-screen flex flex-col justify-between selection:bg-fortnite-purple selection:text-white">
 
-    <!-- Header / Navbar (Clean, ohne Maintenance Zusatz) -->
-    <header class="bg-fortnite-dark/80 backdrop-blur-xl border-b border-purple-900/20">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-            <div class="flex items-center gap-3">
-                <div class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-fortnite-purple via-fortnite-pink to-fortnite-cyan flex items-center justify-center font-fortnite text-3xl text-white shadow-lg shadow-fortnite-purple/40">
-                    FC
-                </div>
-                <div>
-                    <span class="font-fortnite text-3xl font-bold bg-gradient-to-r from-white via-gray-200 to-fortnite-cyan bg-clip-text text-transparent block leading-none">
-                        FORTNITE CLIPZ
-                    </span>
-                    <span class="text-xs text-fortnite-cyan font-semibold tracking-widest uppercase">Community Highlights</span>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <!-- Main Content: Sachlicher Wartungsmodus mit Countdown -->
+    <!-- Main Content: Zentrierte Wartungsmeldung ohne Header -->
     <main class="flex-grow flex items-center justify-center px-4 sm:px-6 lg:px-8 py-12">
         <div class="relative max-w-xl w-full bg-fortnite-card rounded-3xl overflow-hidden border border-purple-900/40 p-8 md:p-10 glow-effect text-center">
             
@@ -95,12 +78,9 @@
                     </div>
                 </div>
 
-                <!-- Aktionen -->
-                <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
-                    <button onclick="window.close()" class="w-full sm:w-auto px-6 py-3 rounded-2xl bg-fortnite-dark border border-purple-900/50 text-gray-300 hover:text-white hover:border-fortnite-purple text-sm font-semibold transition-all">
-                        Tab schließen
-                    </button>
-                    <a href="about:blank" class="w-full sm:w-auto px-6 py-3 rounded-2xl bg-gradient-to-r from-fortnite-purple via-fortnite-pink to-fortnite-cyan text-white text-sm font-semibold shadow-lg shadow-fortnite-purple/30 hover:opacity-95 transition-opacity text-center">
+                <!-- Nur Button: Seite verlassen -->
+                <div class="flex justify-center">
+                    <a href="about:blank" class="w-full sm:w-auto px-8 py-3 rounded-2xl bg-gradient-to-r from-fortnite-purple via-fortnite-pink to-fortnite-cyan text-white text-sm font-semibold shadow-lg shadow-fortnite-purple/30 hover:opacity-95 transition-opacity text-center">
                         Seite verlassen
                     </a>
                 </div>
