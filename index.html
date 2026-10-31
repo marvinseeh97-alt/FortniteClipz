@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fortnite Clipz - In Wartung / Update</title>
+    <title>Fortnite Clipz - Update in Arbeit</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -29,12 +29,12 @@
     <style>
         .font-fortnite { font-family: 'Teko', sans-serif; letter-spacing: 1px; }
         body { font-family: 'Inter', sans-serif; }
-        .glow-effect { box-shadow: 0 0 50px -10px rgba(145, 70, 255, 0.3); }
+        .glow-effect { box-shadow: 0 0 50px -10px rgba(145, 70, 255, 0.25); }
     </style>
 </head>
 <body class="bg-fortnite-dark text-gray-100 min-h-screen flex flex-col justify-between selection:bg-fortnite-purple selection:text-white">
 
-    <!-- Header / Navbar (Dezent im Wartungsmodus) -->
+    <!-- Header / Navbar (Clean, ohne Maintenance Zusatz) -->
     <header class="bg-fortnite-dark/80 backdrop-blur-xl border-b border-purple-900/20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
             <div class="flex items-center gap-3">
@@ -45,37 +45,55 @@
                     <span class="font-fortnite text-3xl font-bold bg-gradient-to-r from-white via-gray-200 to-fortnite-cyan bg-clip-text text-transparent block leading-none">
                         FORTNITE CLIPZ
                     </span>
-                    <span class="text-xs text-fortnite-cyan font-semibold tracking-widest uppercase">Maintenance Mode</span>
+                    <span class="text-xs text-fortnite-cyan font-semibold tracking-widest uppercase">Community Highlights</span>
                 </div>
             </div>
         </div>
     </header>
 
-    <!-- Main Content: Wartungs-Banner / Overlay -->
+    <!-- Main Content: Sachlicher Wartungsmodus mit Countdown -->
     <main class="flex-grow flex items-center justify-center px-4 sm:px-6 lg:px-8 py-12">
         <div class="relative max-w-xl w-full bg-fortnite-card rounded-3xl overflow-hidden border border-purple-900/40 p-8 md:p-10 glow-effect text-center">
             
-            <!-- Hintergrund Deko -->
-            <div class="absolute -right-20 -top-20 w-64 h-64 bg-fortnite-purple/15 rounded-full blur-3xl pointer-events-none"></div>
+            <div class="absolute -right-20 -top-20 w-64 h-64 bg-fortnite-purple/10 rounded-full blur-3xl pointer-events-none"></div>
             <div class="absolute -left-20 -bottom-20 w-64 h-64 bg-fortnite-cyan/10 rounded-full blur-3xl pointer-events-none"></div>
 
             <div class="relative z-10">
-                <!-- Icon / Badge -->
-                <div class="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-fortnite-purple/20 border border-fortnite-purple/40 text-fortnite-cyan text-2xl mb-6 shadow-inner">
-                    🛠️
+                <div class="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-fortnite-dark border border-purple-900/40 text-fortnite-cyan text-xl mb-6">
+                    ⏳
                 </div>
 
-                <h1 class="font-fortnite text-4xl md:text-5xl font-bold text-white tracking-wide mb-3">
-                    WIR BAUEN UM!
+                <h1 class="font-fortnite text-3xl md:text-4xl font-bold text-white tracking-wide mb-2">
+                    SYSTEM-AKTUALISIERUNG
                 </h1>
                 
                 <span id="app-version" class="inline-block bg-fortnite-purple/20 border border-fortnite-purple/40 text-fortnite-cyan text-xs font-bold px-3 py-1 rounded-full mb-6">
                     V1.1
                 </span>
 
-                <p class="text-gray-300 text-sm md:text-base leading-relaxed mb-8">
-                    Die Seite bekommt aktuell ein <strong class="text-white">großes Update</strong> verpasst! Daher ist der normale Betrieb vorübergehend pausiert. Schau später wieder vorbei, wenn wir mit frischen Features und neuen Features am Start sind.
+                <p class="text-gray-400 text-sm md:text-base leading-relaxed mb-8">
+                    Die Plattform wird derzeit überarbeitet. Der Zugriff ist bis zum Abschluss der Wartungsarbeiten vorübergehend nicht möglich.
                 </p>
+
+                <!-- Live Countdown Timer -->
+                <div class="grid grid-cols-4 gap-2 mb-8 bg-fortnite-dark/60 border border-purple-900/30 p-4 rounded-2xl">
+                    <div class="flex flex-col items-center">
+                        <span id="days" class="text-2xl md:text-3xl font-bold text-white font-fortnite">00</span>
+                        <span class="text-[10px] text-gray-500 uppercase tracking-wider">Tage</span>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <span id="hours" class="text-2xl md:text-3xl font-bold text-white font-fortnite">00</span>
+                        <span class="text-[10px] text-gray-500 uppercase tracking-wider">Std</span>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <span id="minutes" class="text-2xl md:text-3xl font-bold text-white font-fortnite">00</span>
+                        <span class="text-[10px] text-gray-500 uppercase tracking-wider">Min</span>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <span id="seconds" class="text-2xl md:text-3xl font-bold text-fortnite-cyan font-fortnite">00</span>
+                        <span class="text-[10px] text-gray-500 uppercase tracking-wider">Sek</span>
+                    </div>
+                </div>
 
                 <!-- Aktionen -->
                 <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
@@ -101,13 +119,43 @@
                 &copy; 2026 Fortnite Clipz – Alle Rechte vorbehalten.
             </div>
             <div class="flex justify-center sm:justify-end gap-4">
-                <span class="text-gray-600">Wartungsmodus aktiv</span>
+                <span class="text-gray-600">Wartungsarbeiten aktiv</span>
             </div>
         </div>
     </footer>
 
-    <!-- JavaScript zum Laden der Version aus data.json -->
+    <!-- Skripte für Version & Countdown -->
     <script>
+        // Ziel-Datum: 2. November 2026 um 00:00 Uhr
+        const targetDate = new Date("2026-11-02T00:00:00").getTime();
+
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const distance = targetDate - now;
+
+            if (distance < 0) {
+                document.getElementById("days").textContent = "00";
+                document.getElementById("hours").textContent = "00";
+                document.getElementById("minutes").textContent = "00";
+                document.getElementById("seconds").textContent = "00";
+                return;
+            }
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById("days").textContent = String(days).padStart(2, '0');
+            document.getElementById("hours").textContent = String(hours).padStart(2, '0');
+            document.getElementById("minutes").textContent = String(minutes).padStart(2, '0');
+            document.getElementById("seconds").textContent = String(seconds).padStart(2, '0');
+        }
+
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+
+        // Version aus data.json laden
         async function loadVersion() {
             try {
                 const response = await fetch('data.json');
